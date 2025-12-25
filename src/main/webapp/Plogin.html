@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Login - SkyJet Airlines</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #004e92, #000428);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background-color: rgba(0, 0, 40, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .navbar h1 {
+      color: #00c3ff;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00c3ff;
+    }
+
+    /* Login Box */
+    .login-box {
+      background-color: #1a1f3c;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-width: 400px;
+      margin-top: 80px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+      color: #00c3ff;
+    }
+
+    .login-box label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2d3454;
+      color: white;
+      font-size: 15px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00c3ff;
+      border: none;
+      border-radius: 8px;
+      color: #000428;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #00a2d8;
+    }
+
+    .login-box .footer-text {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .login-box .footer-text a {
+      color: #00c3ff;
+      text-decoration: none;
+    }
+
+    .airline-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .airline-logo img {
+      width: 80px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        display: inline-block;
+        margin: 5px 10px 0 0;
+      }
+
+      .login-box {
+        margin: 40px 20px 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>SkyJet Airlines</h1>
+    <div class="nav-links">
+      <a href="Admin.jsp">Admin</a>
+      <a href="Plogin.html">Passenger Login</a>
+      <a href="Passenger.jsp">Register</a>
+    </div>
+  </div>
+
+  <!-- Login Box -->
+  <div class="login-box">
+    <div class="airline-logo">
+      <!-- Optional logo image -->
+      <!-- <img src="your-logo.png" alt="SkyJet Logo"> -->
+    </div>
+    <h2>Passenger Login</h2>
+    <form action="passenger_login" method="POST">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer-text">
+      Don't have an account? <a href="Passenger.jsp">Register here</a>
+    </div>
+  </div>
+
+</body>
+</html>
